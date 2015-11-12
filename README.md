@@ -25,11 +25,11 @@ Example
 
 **Gradle**
 
-default wildfly: 9.0.0.Alpha1
-
 - Xtend 2.9.0.beta5
 - Gradle 2.+ now on 2.8
+- Fixes to build OurDsl on Gradle
 - Maven Support for Local Repository
+- Java 8
 
 Gradle - basic commands
 --------------
