@@ -1,0 +1,42 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		jcenter()
+	}
+	dependencies {
+		classpath 'org.xtend:xtend-gradle-plugin:0.4.+'
+		classpath 'org.xtext:xtext-idea-gradle-plugin:0.3.+'
+	}
+}
+
+subprojects {
+	ext.xtextVersion = '2.9.0.beta5'
+	repositories {
+        mavenLocal()
+		jcenter()
+	}
+	
+	apply plugin: 'java'
+	apply plugin: 'org.xtend.xtend'
+	apply from: "${rootDir}/gradle/source-layout.gradle"
+	apply from: "${rootDir}/gradle/maven-deployment.gradle"
+	apply plugin: 'eclipse'
+	apply plugin: 'idea'
+    apply plugin: 'maven'
+
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+
+    group='yourdsl'
+    version='1.0.0-SNAPSHOT'
+
+	configurations.all {
+		exclude group: 'asm'
+	}
+
+    jar {
+        manifest {
+            attributes 'Bundle-SymbolicName': project.name
+        }
+    }
+}

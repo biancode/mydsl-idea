@@ -1,0 +1,57 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		jcenter()
+	}
+	dependencies {
+		classpath 'org.xtend:xtend-gradle-plugin:0.4.+'
+		classpath 'org.xtext:xtext-idea-gradle-plugin:0.3.+'
+
+        classpath 'mydsl:mydsl:1.0.+'
+		classpath 'mydsl:mydsl.ide:1.0.+'
+        classpath 'mydsl:mydsl.idea:1.0.+'
+        classpath 'mydsl:mydsl.web:1.0.+'
+
+        classpath 'yourdsl:yourdsl:1.0.+'
+		classpath 'yourdsl:yourdsl.ide:1.0.+'
+        classpath 'yourdsl:yourdsl.idea:1.0.+'
+        classpath 'yourdsl:yourdsl.web:1.0.+'
+	}
+}
+
+subprojects {
+	ext.xtextVersion = '2.9.0.beta6'
+	repositories {
+        mavenLocal()
+		jcenter()
+	}
+	
+	apply plugin: 'java'
+	apply plugin: 'org.xtend.xtend'
+	apply from: "${rootDir}/gradle/source-layout.gradle"
+	apply from: "${rootDir}/gradle/maven-deployment.gradle"
+	apply plugin: 'eclipse'
+	apply plugin: 'idea'
+    apply plugin: 'maven'
+	
+	group = 'ourdsl'
+	version = '1.0.0-SNAPSHOT'
+
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+	
+	configurations.all {
+		exclude group: 'asm'
+	}
+
+    dependencies {
+        compile 'mydsl:mydsl:1.0.+'
+        compile 'yourdsl:yourdsl:1.0.+'
+    }
+
+    jar {
+        manifest {
+            attributes 'Bundle-SymbolicName': project.name
+        }
+    }
+}

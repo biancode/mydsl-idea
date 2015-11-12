@@ -1,0 +1,13 @@
+dependencies {
+	compile project(':mydsl')
+	compile "org.eclipse.xtext:org.eclipse.xtext.ide:${xtextVersion}"
+	compile "org.eclipse.xtext:org.eclipse.xtext.xbase.ide:${xtextVersion}"
+}
+
+jar {
+	manifest{
+		attributes 'Require-Bundle': 'mydsl'
+		attributes 'Export-Package': '''org.xtext.example.mydsl.ide.contentassist.antlr,
+         org.xtext.example.mydsl.ide.contentassist.antlr.internal'''
+	}
+}

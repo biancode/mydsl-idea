@@ -1,0 +1,34 @@
+//see https://github.com/xtext/xtext-gradle-plugin/tree/master/xtext-idea-gradle-plugin
+apply plugin: 'org.xtext.idea-plugin'
+apply plugin: 'org.xtext.idea-repository'
+
+dependencies {
+	compile project(':ourdsl')
+	compile project(':ourdsl.ide')
+
+    compile 'mydsl:mydsl.ide:1.0.+'
+    compile 'mydsl:mydsl.idea:1.0.+'
+    compile 'mydsl:mydsl.web:1.0.+'
+
+    compile 'yourdsl:yourdsl.ide:1.0.+'
+    compile 'yourdsl:yourdsl.idea:1.0.+'
+    compile 'yourdsl:yourdsl.web:1.0.+'
+}
+
+ideaDevelopment {
+	ideaVersion = '143.747.5'
+	pluginRepositories {
+		url "http://download.eclipse.org/modeling/tmf/xtext/idea/${xtextVersion}/updatePlugins.xml"
+	}
+	pluginDependencies {
+		id 'org.eclipse.xtext.idea' version xtextVersion
+	}
+}
+
+ideaRepository.rootUrl = "${buildDir}/ideaRepository"
+
+jar {
+    manifest {
+        attributes 'Require-Bundle': 'ourdsl, ourdsl.ide'
+    }
+}

@@ -1,0 +1,61 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : ourdsl:ourdsl.web : ourdsl.web-1.0.0-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/out/artifacts/ourdsl.web/exploded/ourdsl.web-1.0.0-SNAPSHOT.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$/ourdsl.parent" />
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="ourdsl.web/web/Web Gradle : ourdsl.web-1.0.0-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ourdsl.web" />
+          <element id="dir-copy" path="$PROJECT_DIR$/ourdsl.parent/ourdsl.web/build/resources/main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="ourdsl-ourdsl-1.0.0-SNAPSHOT.jar">
+            <element id="module-output" name="ourdsl" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ourdsl.parent/ourdsl/build/resources/main" />
+          </element>
+          <element id="library" level="project" name="Gradle: org.eclipse.xtext:org.eclipse.xtext:2.9.0.beta5" />
+          <element id="library" level="project" name="Gradle: org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.11.0-v20150123-0347" />
+          <element id="library" level="project" name="Gradle: org.eclipse.xtext:org.eclipse.xtext.xbase:2.9.0.beta5" />
+          <element id="library" level="project" name="Gradle: org.eclipse.xtext:org.eclipse.xtext.util:2.9.0.beta5" />
+          <element id="library" level="project" name="Gradle: org.eclipse.xtend:org.eclipse.xtend.lib:2.9.0.beta5" />
+          <element id="library" level="project" name="Gradle: com.ibm.icu:icu4j:52.1" />
+          <element id="library" level="project" name="Gradle: com.google.guava:guava:14.0.1" />
+          <element id="library" level="project" name="Gradle: org.antlr:antlr-runtime:3.2" />
+          <element id="library" level="project" name="Gradle: org.eclipse.xtext:org.eclipse.xtext.xbase.lib:2.9.0.beta5" />
+          <element id="library" level="project" name="Gradle: org.eclipse.xtext:org.eclipse.xtext.common.types:2.9.0.beta5" />
+          <element id="library" level="project" name="Gradle: com.google.inject:guice:3.0" />
+          <element id="library" level="project" name="Gradle: org.eclipse.emf:org.eclipse.emf.codegen:2.10.0" />
+          <element id="library" level="project" name="Gradle: org.eclipse.xtend:org.eclipse.xtend.lib.macro:2.9.0.beta5" />
+          <element id="library" level="project" name="Gradle: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Gradle: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Gradle: org.sonatype.sisu.inject:cglib:2.2.1-v20090111" />
+          <element id="library" level="project" name="Gradle: org.eclipse.emf:org.eclipse.emf.ecore:2.11.0-v20150123-0347" />
+          <element id="library" level="project" name="Gradle: org.eclipse.emf:org.eclipse.emf.mwe2.lib:2.8.2" />
+          <element id="library" level="project" name="Gradle: org.eclipse.emf:org.eclipse.emf.mwe2.runtime:2.8.2" />
+          <element id="library" level="project" name="Gradle: org.eclipse.emf:org.eclipse.emf.common:2.11.0-v20150123-0347" />
+          <element id="archive" name="ourdsl-ourdsl.ide-1.0.0-SNAPSHOT.jar">
+            <element id="module-output" name="ourdsl.ide" />
+            <element id="dir-copy" path="$PROJECT_DIR$/ourdsl.parent/ourdsl.ide/build/resources/main" />
+          </element>
+          <element id="library" level="project" name="Gradle: org.eclipse.xtext:org.eclipse.xtext.ide:2.9.0.beta5" />
+          <element id="library" level="project" name="Gradle: org.eclipse.xtext:org.eclipse.xtext.xbase.ide:2.9.0.beta5" />
+          <element id="library" level="project" name="Gradle: org.eclipse.xtext:org.eclipse.xtext.xbase.web:2.9.0.beta5" />
+          <element id="library" level="project" name="Gradle: org.eclipse.xtext:org.eclipse.xtext.web.servlet:2.9.0.beta5" />
+          <element id="library" level="project" name="Gradle: org.webjars:requirejs:2.1.17" />
+          <element id="library" level="project" name="Gradle: org.webjars:jquery:2.1.4" />
+          <element id="library" level="project" name="Gradle: org.webjars:ace:1.1.9" />
+          <element id="library" level="project" name="Gradle: org.eclipse.xtext:org.eclipse.xtext.web:2.9.0.beta5" />
+          <element id="library" level="project" name="Gradle: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.3.1" />
+          <element id="library" level="project" name="Gradle: org.eclipse.equinox:common:3.6.200-v20130402-1505" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/ourdsl.web/exploded/ourdsl.web-1.0.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/yourdsl.parent" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/yourdsl.parent" />
+            <option value="$PROJECT_DIR$/yourdsl.parent/yourdsl" />
+            <option value="$PROJECT_DIR$/yourdsl.parent/yourdsl.ide" />
+            <option value="$PROJECT_DIR$/yourdsl.parent/yourdsl.idea" />
+            <option value="$PROJECT_DIR$/yourdsl.parent/yourdsl.web" />
+          </set>
+        </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$/yourdsl.parent" />
+            <option value="$PROJECT_DIR$/yourdsl.parent/yourdsl" />
+            <option value="$PROJECT_DIR$/yourdsl.parent/yourdsl.ide" />
+            <option value="$PROJECT_DIR$/yourdsl.parent/yourdsl.idea" />
+            <option value="$PROJECT_DIR$/yourdsl.parent/yourdsl.web" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
