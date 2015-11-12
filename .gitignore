@@ -1,3 +1,7 @@
-mydsl/.idea
+.idea
 mydsl/mydsl.parent/gradle/wrapper
 *.iml
+.settings
+.classpath
+.project
+
