@@ -1,5 +1,7 @@
-Xtend 2.9 - IntellJ Idea 15 - Multi-DSL-Example
+Xtend 2.9 - Multi-DSL-Example
 ==============
+
+** IntelliJ Idea 15 RC **
 
 *find me with 'xtend 2.9 gradle intellij idea'*
 
