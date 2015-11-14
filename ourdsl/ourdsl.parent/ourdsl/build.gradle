@@ -45,15 +45,3 @@ jar {
         into('model/generated')
     }
 }
-
-clean {
-    delete 'model'
-
-    delete 'src/main/xtext-gen'
-    delete 'src/main/xtend-gen'
-    delete 'src/main/java-gen'
-
-    delete 'src/test/xtext-gen'
-    delete 'src/test/xtend-gen'
-    delete 'src/test/java-gen'
-}

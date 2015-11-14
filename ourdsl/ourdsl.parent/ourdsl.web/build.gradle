@@ -2,11 +2,11 @@ plugins {
 	id 'war'
 }
 dependencies {
+	compile 'mydsl:mydsl.ide:1.0.+'
+	compile 'yourdsl:yourdsl.ide:1.0.+'
+
 	compile project(':ourdsl')
 	compile project(':ourdsl.ide')
-
-    compile 'mydsl:mydsl.ide:1.0.+'
-    compile 'yourdsl:yourdsl.ide:1.0.+'
 
 	compile "org.eclipse.xtext:org.eclipse.xtext.xbase.web:${xtextVersion}"
 	compile "org.eclipse.xtext:org.eclipse.xtext.web.servlet:${xtextVersion}"
@@ -26,6 +26,6 @@ task jettyRun(type:JavaExec) {
 
 jar {
     manifest {
-        attributes 'Require-Bundle': 'ourdsl, ourdsl.ide'
+        attributes 'Require-Bundle': 'mydsl, mydsl.ide, yourdsl, yourdsl.ide, ourdsl, ourdsl.ide'
     }
 }

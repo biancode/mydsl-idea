@@ -3,25 +3,28 @@ apply plugin: 'org.xtext.idea-plugin'
 apply plugin: 'org.xtext.idea-repository'
 
 dependencies {
+    compile 'mydsl:mydsl.ide:1.0.+'
+    compile 'yourdsl:yourdsl.ide:1.0.+'
+
 	compile project(':ourdsl')
 	compile project(':ourdsl.ide')
-
-    compile 'mydsl:mydsl.ide:1.0.+'
-    compile 'mydsl:mydsl.idea:1.0.+'
-    compile 'mydsl:mydsl.web:1.0.+'
-
-    compile 'yourdsl:yourdsl.ide:1.0.+'
-    compile 'yourdsl:yourdsl.idea:1.0.+'
-    compile 'yourdsl:yourdsl.web:1.0.+'
 }
+
+String parentPathDsl = rootDir
+parentPathDsl = parentPathDsl.replace('ourdsl/ourdsl.parent', '')
+println parentPathDsl
 
 ideaDevelopment {
 	ideaVersion = '143.747.5'
 	pluginRepositories {
 		url "http://download.eclipse.org/modeling/tmf/xtext/idea/${xtextVersion}/updatePlugins.xml"
+        url "file://localhost${parentPathDsl}mydsl/mydsl.parent/mydsl.idea/build/ideaRepository/updatePlugins.xml"
+        url "file://localhost${parentPathDsl}yourdsl/yourdsl.parent/yourdsl.idea/build/ideaRepository/updatePlugins.xml"
 	}
 	pluginDependencies {
 		id 'org.eclipse.xtext.idea' version xtextVersion
+        id 'mydsl.idea' version '1.0.0-SNAPSHOT'
+        id 'yourdsl.idea' version '1.0.0-SNAPSHOT'
 	}
 }
 
@@ -29,6 +32,6 @@ ideaRepository.rootUrl = "${buildDir}/ideaRepository"
 
 jar {
     manifest {
-        attributes 'Require-Bundle': 'ourdsl, ourdsl.ide'
+        attributes 'Require-Bundle': 'mydsl, mydsl.ide, yourdsl, yourdsl.ide, ourdsl, ourdsl.ide'
     }
 }

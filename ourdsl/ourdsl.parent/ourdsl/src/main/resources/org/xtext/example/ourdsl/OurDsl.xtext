@@ -1,9 +1,10 @@
 grammar org.xtext.example.ourdsl.OurDsl with org.eclipse.xtext.common.Terminals
 
-import "http://www.xtext.org/example/mydsl/MyDsl" as mydsl
-import "http://www.xtext.org/example/yourdsl/YourDsl" as yourdsl
-
 generate ourDsl "http://www.xtext.org/example/ourdsl/OurDsl"
+
+import "http://www.xtext.org/example/mydsl/MyDsl" as mydsl
+
+import "http://www.xtext.org/example/yourdsl/YourDsl" as yourdsl
 
 Model:
 	greetings+=Greeting*;

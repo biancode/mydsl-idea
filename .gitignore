@@ -1,7 +1,13 @@
 .idea
-mydsl/mydsl.parent/gradle/wrapper
+wrapper
 *.iml
 .settings
 .classpath
 .project
-
+xtext-gen
+src-gen
+java-gen
+bin
+build
+out
+*.bak

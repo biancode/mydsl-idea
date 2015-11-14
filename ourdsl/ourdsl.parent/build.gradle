@@ -9,18 +9,14 @@ buildscript {
 
         classpath 'mydsl:mydsl:1.0.+'
 		classpath 'mydsl:mydsl.ide:1.0.+'
-        classpath 'mydsl:mydsl.idea:1.0.+'
-        classpath 'mydsl:mydsl.web:1.0.+'
 
         classpath 'yourdsl:yourdsl:1.0.+'
 		classpath 'yourdsl:yourdsl.ide:1.0.+'
-        classpath 'yourdsl:yourdsl.idea:1.0.+'
-        classpath 'yourdsl:yourdsl.web:1.0.+'
 	}
 }
 
 subprojects {
-	ext.xtextVersion = '2.9.0.beta6'
+	ext.xtextVersion = '2.9.0.beta5'
 	repositories {
         mavenLocal()
 		jcenter()
@@ -54,4 +50,16 @@ subprojects {
             attributes 'Bundle-SymbolicName': project.name
         }
     }
+
+	clean {
+		delete 'model'
+
+		delete 'src/main/xtext-gen'
+		delete 'src/main/xtend-gen'
+		delete 'src/main/java-gen'
+
+		delete 'src/test/xtext-gen'
+		delete 'src/test/xtend-gen'
+		delete 'src/test/java-gen'
+	}
 }
