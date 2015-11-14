@@ -17,7 +17,7 @@ ideaDevelopment {
 	}
 }
 
-ideaRepository.rootUrl = "${buildDir}/ideaRepository"
+ideaRepository.rootUrl = "file://${buildDir}/ideaRepository"
 
 
 jar {
